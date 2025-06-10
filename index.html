@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Times Prayer</title>
+</head>
+<body>
+    <div class="main-container">
+        <h2 class="title">Waktu Sholat Kota & Kabupaten di Indonesia</h2>
+        <div class="search-container" id="search-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Enter The City Name..">
+            <span class="material-symbols-outlined" id="search-btn" onclick="getTime();">search</span>
+        </div>
+        <div class="prayer-time" id="prayer-time">
+            <h3 class="location"><span id="location"></span></h3>
+            <h5 id="date" class="date"></h5>
+            <div class="time-container" id="time-container">
+                <div class="subuh-container" id="subuh-container">
+                    <p class="adzan" id="subuh">Subuh</p>
+                    <p class="subuh-time" id="subuh-time">xx.xx</p>
+                </div> <hr>
+                <div class="dzuhur-container" id="dzuhur-container">
+                    <p class="adzan" id="dzuhur">Dzuhur</p>
+                    <p class="dzuhur-time" id="dzuhur-time">xx.xx</p>
+                </div> <hr>
+                <div class="ashar-container" id="ashar-container">
+                    <p class="adzan" id="ashar">Ashar</p>
+                    <p class="ashar-time" id="ashar-time">xx.xx</p>
+                </div> <hr>
+                <div class="magrib-container" id="magrib-container">
+                    <p class="adzan" id="magrib">Maghrib</p>
+                    <p class="magrib-time" id="magrib-time">xx.xx</p>
+                </div> <hr>
+                <div class="isha-container" id="isha-container">
+                    <p class="adzan" id="isha">Isya</p>
+                    <p class="isha-time" id="isha-time">xx.xx</p>
+                </div>
+            </div>
+        </div>
+        <div class="quotes" id="quotes">
+            <h3 class="subtitle">Random Ayat</h3>
+          <h5 id="ayah" class="ayah"></h5>
+          <div class="ayah-details" id="ayah-details">
+            <h6 id="surah-title" class="surah-title"></h6>
+            <h6 id="surah-number" class="surah-number"></h6>
+          </div>
+        </div>
+    </div>
+    <footer>
+      Data waktu sholat disediakan oleh API <b>MyQuran.</b>
+    </footer>
+</body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script type="text/javascript" charset="utf-8">
+    const lokasi = document.getElementById("search-btn");
+  var typed = new Typed ('#location', {
+  strings : ["Kota Kediri", "Kota Bogor", "Kota Jakarta", "Kota Bandung", "Kota Bekasi", "Kab. Bandung","Kab. Bandung Barat", "Kab. Bogor", "Kab. Kediri"],
+  typeSpeed : 150,
+  backSpeed : 150, 
+  loop : true
+  });
+  
+  lokasi.addEventListener("click", function() {
+    typed.destroy()
+  });
+</script>
+</html>
