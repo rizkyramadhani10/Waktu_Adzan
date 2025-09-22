@@ -1,51 +1,36 @@
-import 'package:flutter/material.dart';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBO - Pertemuan 2</title>
+</head>
+<body>
+    <?php
+    // For Loop
+    echo "Contoh Pengulangan dengan For Loop";
+    for ($i = 1; $i <= 10; $i++) {
+        echo "<br>Pengulangan ke-$i";
+    }
 
-void main() {
-  runApp(const MyApp());
-}
+    // While Loop
+    echo "<br><br>Contoh Pengulangan dengan While Loop";
+    $j = 1;
+    while ($j <= 10) {
+        echo "<br>Pengulangan ke-$j";
+        $j++;
+    };
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+    // Foreach Loop
+    echo "<br><br>Contoh Pengulangan dengan Foreach Loop";
+    $a = ["apel", "jeruk", "mangga"];
+    foreach ($a as $buah) {
+        echo "<br>Buah: $buah";
+    };
+    ?>
+</body>
+</html>
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          centerTitle: true,
-          title: Text('Top Navigation Bar',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.green[500],
-              fontWeight: FontWeight.bold
-            ),
-            ),
-            leading: Icon(Icons.menu, color: Colors.green[500]),
-            actions: [
-              IconButton(
-                onPressed: () {}, 
-                icon: Icon(
-                  Icons.logout, 
-                  color: Colors.green[500]
-                  )
-              )
-            ],
-        ),
-        backgroundColor: Colors.green[500],
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Icon(Icons.favorite, size: 180, color: Colors.green[500]),
-          ),
-        ),
-      ),
-    );
-  }
-}
+
+
+https://drive.google.com/drive/u/0/folders/1DlwMrVAFO7vi9FLrBII3H0FBw2hYlh9t
