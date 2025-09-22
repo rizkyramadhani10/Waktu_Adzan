@@ -31,6 +31,10 @@
 </body>
 </html>
 
+// For Loop
+    echo "Contoh Pengulangan dengan For Loop";
+    for ($i = 1; $i <= 10; $i++) {
+        echo "<br>Pengulangan ke-$i";
 
 
 https://drive.google.com/drive/u/0/folders/1DlwMrVAFO7vi9FLrBII3H0FBw2hYlh9t
